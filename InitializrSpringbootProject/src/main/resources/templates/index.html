@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head xmlns:th="http://www.thymeleaf.org">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla</title>
 </head>
+
 <body>
+
     <h1>Inicio</h1>
-    <p th:text="${saludo}"></p>
+    <div th:if="${listaDeUsuarios != null && !listaDeUsuarios.empty}">
+        <table border="1">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>E-mail</th>
+                <th>Teléfono</th>
+            </tr>
+
+
+            <tr th:each="persona : ${listaDeUsuarios}">
+                <td th:text="${persona.nombre}">Nombre</td>
+                <td th:text="${persona.apellido}">Apellido</td>
+                <td th:text="${persona.email}">E-mail</td>
+                <td th:text="${persona.telefono}">Telèfono</td>
+            </tr>
+
+        </table>
+    </div>
+    <div th:if="${listaDeUsuarios==null || listaDeUsuarios.empty}">
+        La lista de usuarios está vacía :(
+    </div>
 </body>
+
 </html>
