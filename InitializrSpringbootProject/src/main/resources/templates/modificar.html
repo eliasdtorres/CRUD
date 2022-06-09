@@ -12,6 +12,7 @@
     <h1>Datos de la persona</h1>
     <a th:href="@{/}">Volver</a>
     <form th:action="@{/guardar}" method="POST" th:object="${persona}">
+        <input type="hidden" name="idPersona" th:field="*{idPersona}">
         <label for="nombre">Nombre:</label><br>
         <input type="text" name="nombre" id="Nombre" th:field="*{nombre}" placeholder="Ingrese su nombre">
         <br>

@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class PersonaSeviceImpl implements iPersonaService{
+    
     @Autowired
     private iPersonaDao iPersonaDao;
     

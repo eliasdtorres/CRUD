@@ -19,6 +19,8 @@
                 <th>Apellido</th>
                 <th>E-mail</th>
                 <th>Teléfono</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
             </tr>
 
 
@@ -27,6 +29,9 @@
                 <td th:text="${persona.apellido}">Apellido</td>
                 <td th:text="${persona.email}">E-mail</td>
                 <td th:text="${persona.telefono}">Telèfono</td>
+                <td><a th:href="@{/editar/}+${persona.idPersona}">Editar</a></td>
+                <td><a th:href="@{/eliminar(idPersona=${persona.idPersona})}">Eliminar</a></td>
+                <td></td>
             </tr>
 
         </table>
