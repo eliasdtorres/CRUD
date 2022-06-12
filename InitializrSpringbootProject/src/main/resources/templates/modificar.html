@@ -13,10 +13,6 @@
     <h1>[[#{persona.titulo-formulario}]]</h1>
     <a th:href="@{/}">[[#{accion.volver}]]</a>
 
-    <header th:replace="layouts/plantilla::header">
-        
-    </header>
-    <h2>Datos de la persona</h2>
 
     <a th:href="@{/}">Volver</a>
     <form th:action="@{/guardar}" method="POST" th:object="${persona}">
