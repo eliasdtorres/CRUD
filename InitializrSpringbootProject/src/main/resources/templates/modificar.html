@@ -13,14 +13,20 @@
     <a th:href="@{/}">Volver</a>
     <form th:action="@{/guardar}" method="POST" th:object="${persona}">
         <input type="hidden" name="idPersona" th:field="*{idPersona}">
-        <label for="nombre">Nombre:</label><br>
+
+        <label for="nombre">Nombre:</label> <br>
         <input type="text" name="nombre" id="Nombre" th:field="*{nombre}" placeholder="Ingrese su nombre">
+        <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">Error nombre</span>
         <br>
+
         <label for="apellido">Apelllido:</label><br>
         <input type="text" name="apellido" id="Apellido" th:field="*{apellido}" placeholder="Ingrese su apellido">
+        <span th:if="${#fields.hasErrors('apellido')}" th:errors= "*{apellido}">Error apellido</span>
         <br>
+
         <label for="email">E-mail:</label><br>
-        <input type="email" name="email" id="Email" th:field="*{email}" placeholder="Ingrese su e-mail">
+        <input type="text" name="email" id="Email" th:field="*{email}" placeholder="Ingrese su e-mail">
+        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Error e-mail</span>
         <br>
         <label for="telefono">Telefono:</label><br>
         <input type="tel" name="telefono" id="Telefono" th:field="*{telefono}"
