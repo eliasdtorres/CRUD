@@ -10,7 +10,12 @@
 
 <body>
 
-    <h1>Inicio</h1>
+    <header th:replace="layouts/plantilla::header">
+
+    </header>
+
+
+
     <a th:href="@{/agregar}">Crear usuario</a>
     <div th:if="${listaDeUsuarios != null && !listaDeUsuarios.empty}">
         <table border="1">
@@ -39,6 +44,8 @@
     <div th:if="${listaDeUsuarios==null || listaDeUsuarios.empty}">
         La lista de usuarios está vacía :(
     </div>
+
+    <footer th:replace="layouts/plantilla::footer"></footer>
 </body>
 
 </html>
