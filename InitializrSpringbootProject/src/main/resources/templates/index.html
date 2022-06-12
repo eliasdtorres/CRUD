@@ -14,6 +14,13 @@
     </header>
     
     <a th:href="@{/agregar}">[[#{persona.accion.crear-persona}]]</a>
+    <header th:replace="layouts/plantilla::header">
+
+    </header>
+
+
+
+    <a th:href="@{/agregar}">Crear usuario</a>
     <div th:if="${listaDeUsuarios != null && !listaDeUsuarios.empty}">
         <table border="1">
             <tr>
@@ -41,6 +48,8 @@
     <div th:if="${listaDeUsuarios==null || listaDeUsuarios.empty}">
         [[#{persona.lista-vacia}]]
     </div>
+
+    <footer th:replace="layouts/plantilla::footer"></footer>
 </body>
 
 </html>
