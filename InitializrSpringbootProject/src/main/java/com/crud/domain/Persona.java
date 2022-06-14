@@ -5,6 +5,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import lombok.Data;
+import lombok.Getter;
 
 
 
@@ -16,6 +17,7 @@ public class Persona implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @Getter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPersona;
     
