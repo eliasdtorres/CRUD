@@ -13,8 +13,6 @@
     <h2>[[#{persona.titulo-formulario}]]</h2>
     <a th:href="@{/}">[[#{accion.volver}]]</a>
 
-
-    <a th:href="@{/}">Volver</a>
     <form th:action="@{/guardar}" method="POST" th:object="${persona}">
         <input type="hidden" name="idPersona" th:field="*{idPersona}">
 
