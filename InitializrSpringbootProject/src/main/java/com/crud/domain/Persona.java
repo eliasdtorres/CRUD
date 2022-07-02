@@ -22,9 +22,11 @@ public class Persona implements Serializable {
     private Long idPersona;
     
     @NotEmpty
+    @Column(name="nombre")
     private String nombre;
     
     @NotEmpty
+    @Column(name="apellido")
     private String apellido;
     
     @NotEmpty
