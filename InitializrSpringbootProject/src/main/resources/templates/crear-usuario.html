@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear usuario</title>
+</head>
+<body>
+    
+    <form th:action="">
+         
+        <label for="username">[[#{usuario.username}]]:</label><br>
+        <input type="text" name="username" id="Username"><br>
+
+        <label for="email">[[#{usuario.email}}]]:</label><br>
+        <input type="email" name="email" id="Email"><br>
+
+        <label for="password">[[#{usuario.password}]]:</label><br>
+        <input type="password" name="password" id="Password"><br>
+
+        <label for="type"></label>[[#{usuario.type}]]:<br>
+        <select name="" id="">
+            <option value="admin">Administrador/a</option>
+            <option value="user">Usuario/a</option>
+        </select><br>
+        <input type="submit" th:value="#{accion.guardar}">
+        <input type="reset" th:value="#{accion.reestablecer}">
+
+    </form>
+
+
+
+
+</body>
+</html>

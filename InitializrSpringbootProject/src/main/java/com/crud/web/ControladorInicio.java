@@ -63,4 +63,9 @@ public class ControladorInicio {
         return "redirect:/";
     }
     
+    @GetMapping("/crear-usuario")
+    public String crearUsuario(){
+        return "crear-usuario";
+    }
+    
 }
