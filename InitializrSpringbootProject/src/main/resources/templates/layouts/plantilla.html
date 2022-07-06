@@ -22,9 +22,7 @@
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
 
             <div class="container">
-                <a th:href="@{/}" class="navbar-brand">
-                    <h1 th:text="#{plantilla.titulo}">Conte clientes</h1>
-                </a>
+                
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -44,7 +42,7 @@
                         </li>
                         <li class="nav-item">
                             <form th:action="@{/logout}" method="POST">
-                                <a href="#" onclick="this.parentNode.submit" class="nav-link">
+                                <a href="#" onclick="this.parentNode.submit();" class="nav-link">
                                     <i class="fas fa-user-times"></i>[[#{barra.salir}]]</a>
                             </form>
                         </li>

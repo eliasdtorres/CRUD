@@ -32,7 +32,14 @@ public class ControladorInicio {
        log.info("Usuario activo: " + user);
     
        model.addAttribute("listaDeUsuarios",listaDeUsuarios);
-                
+       
+       Double saldoTotal=0D;
+        for (Persona p : listaDeUsuarios) {
+            saldoTotal+=p.getSaldo();
+        }
+        model.addAttribute("saldoTotal",saldoTotal);
+        model.addAttribute("totalClientes", listaDeUsuarios.size());
+       
         return "index";
     }
     

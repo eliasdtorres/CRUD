@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
-<head xmlns:th="https://www.thymeleaf.org">
+<head th:replace="layouts/plantilla::head">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,18 @@
 
 <body>
     <header th:replace="layouts/plantilla::header"></header>
-    <h2>[[#{persona.titulo-formulario}]]</h2>
+    <section th:replace="layouts/editar-cliente::editar-cliente"></section>
+    <footer th:replace="layouts/plantilla::footer"></footer>
+
+
+
+
+
+
+
+
+
+    <!--<h2>[[#{persona.titulo-formulario}]]</h2>
     <a th:href="@{/}">[[#{accion.volver}]]</a>
 
     <form th:action="@{/guardar}" method="POST" th:object="${persona}">
@@ -34,9 +45,10 @@
         <input type="tel" name="telefono" id="Telefono" th:field="*{telefono}"
             placeholder="Ingrese su número de teléfono">
         <br>
-        <input type="submit" name="guardar" th:value="#{accion.guardar}">
+        <input type="submit" name="guardar" th:value="#{accion.guardar}">-->
 
-        <footer th:replace="layouts/plantilla::footer"></footer>
+
+
 
     </form>
 </body>

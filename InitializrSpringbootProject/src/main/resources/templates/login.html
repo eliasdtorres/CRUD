@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
+
 <head th:replace="layouts/plantilla::head">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
+
 <body>
-        <h1>Login</h1>
-        <form method="POST" th:action="@{/login}">
-            <label for="username">E-mail:</label><br>
-            <input type="text" name="username" id="username"><br>
+    <header th:replace="layouts/plantilla::header"></header>
 
-            <label for="password">Contraseña</label><br>
-            <input type="password" name="password" id="password"><br>
-            
-            <input type="submit" value="Login">
-            
+    <section id="actions" class="py-4 mb-4 bg-light">
+        <div class="container">
+            <div class="row">
 
-        </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="login">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <dic class="card">
+                        <div class="card-header">
+                            <h4>Login</h4>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST" th:action="@{/login}">
+
+                                <div class="container">
+                                    <div class="form-group">
+                                        <label for="username">Username:</label>
+                                        <input type="text" name="username" id="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password:</label>
+                                        <input type="password" name="password" id="password">
+                                    </div>
+                                </div>
+
+
+                                <input type="submit" value="Login" class="btn btn-primary btn-block">
+
+                            </form>
+                        </div>
+                    </dic>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer th:replace="layouts/plantilla::footer"></footer>
+
 </body>
+
 </html>
